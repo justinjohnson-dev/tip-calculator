@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+}
+
+.outline {
+    margin: auto;
+    width: 350px;
+    border: solid;
+    border-radius: 22px;
+    text-align: center;
+    margin-top: 10%;
+    padding: 2%;
+    background-color: white;
+}
+
+.borders{
+    border: solid;
+    border-radius: 22px;
+    padding: 2%;
+    margin-top: 5%;
+    background-color: rgb(206, 206, 206);
+}
+
+label {
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#tip-range {
+    margin-left: 50px;
+}
+
+input[type=range] {
+    width: 150px;
+}
+
+input {
+    width: 80px;
+    background-color: #f7f7f7;
+}
+
+#split-total {
+    margin-left: 40px;
+}
+
+#bill-total {
+    margin-left: 45px;
+}
+
+.total-bill,
+.split-between {
+    padding-top: 10px;
+}
