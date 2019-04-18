@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript Calculator</title>
 </head>
@@ -11,28 +12,31 @@
     <div class="outline">
         <div class="check-amount borders">
             <label>Check Amount: </label>
-            <input type="text">
+            <input id="check-amount" type="text" placeholder="$" onkeyup="calculatingTotal()">
         </div>
         <div class="tip-calculation borders">
-            <div class="tip-percentage">
-                <label>Tip %</label>
-                <input id="tip-range" type="range">
-            </div>
+            <div class="tip-slider">
+                <label>Tip%</label>
+                <input class="range-slider__range" type="range" value="0" min="0" max="25" step="1">
+                <span class="range-slider__value">0</span>
+              </div>
             <div class="split-between">
                 <label>Split Between</label>
-                <input type="range">
+                <input class="people-split" type="range" min="0" max="50" step="1" value="0" readonly/>
+                <span class="slideValue">0</span>
             </div>
         </div>
         <div class="totals borders">
             <div class="split-amount">
                 <label>Split Total: </label>
-                <input id="split-total" type="text">
+                <input id="split-total" placeholder="$" type="text">
             </div>
             <div class="total-bill">
                 <label>Total Bill: </label>
-                <input id="bill-total" type="text">
+                <input id="bill-total" placeholder="$" type="text">
             </div>
         </div>
     </div>
+    <script src="../src/index.js"></script>
 </body>
 </html>
