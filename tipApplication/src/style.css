@@ -21,17 +21,22 @@ body {
     background-color: rgb(206, 206, 206);
 }
 
+button {
+    margin-top: 5%;
+    font-size: 25px;
+    background-color: rgb(153, 31, 31);
+    font-weight: bold;
+}
+
 label {
     float: left;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 #tip-range {
     margin-left: 50px;
 }
 
-input[type=range] {
+input[type=text] {
     width: 150px;
 }
 
@@ -51,4 +56,16 @@ input {
 .total-bill,
 .split-between {
     padding-top: 10px;
+}
+
+.percent {
+    color:green;
+    font-weight:bold;
+    text-align:center;
+    width:100%;
+    border:none;
+  }
+
+.ui-slider-range {
+    background:green;
 }
