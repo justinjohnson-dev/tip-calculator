@@ -1,13 +1,11 @@
-function calculatingTotal() {
-    let checkAmount = document.getElementById('check-amount').value;
-    document.getElementById('bill-total').value = checkAmount;
-}
+// Tip - Calculator
+
+let range = $('.range-slider-range');
+let value = $('.range-slider-value');
+
 
 let tipSlider = function(){
-  let slider = $('.tip-slider'),
-    range = $('.range-slider__range'),
-    value = $('.range-slider__value');
-
+  let slider = $('.tip-slider')
     slider.each(function(){
       value.each(function(){
         let value = $(this).prev().attr('value');
@@ -33,9 +31,21 @@ let splitSlider = function(){
       });
     range.on('input', function(){
       $(this).next(value).html(this.value);
-      console.log(parseInt(value));
     });
   });
 };
 
 splitSlider();
+
+function calculatingTotal() {
+  let checkAmount = document.getElementById('check-amount').value;
+
+
+  let foo = parseInt(value);
+  
+  let theTotal = checkAmount * 0.15;
+  let finalTotal = parseInt(checkAmount);
+
+  document.getElementById('split-total').value = theTotal;
+  document.getElementById('bill-total').value = theTotal + finalTotal;
+}
