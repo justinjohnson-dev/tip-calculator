@@ -1,5 +1,6 @@
 body {
-    background-color: black;
+    background-image: url("../src/images/background.jpg");
+    background-size: 100% 100%;
 }
 
 .outline {
@@ -10,7 +11,11 @@ body {
     text-align: center;
     margin-top: 10%;
     padding: 2%;
-    background-color: white;
+    background-color: #f7f7f7;
+}
+
+.title {
+    text-shadow: 1px 1px 2px rgb(1, 1, 107);
 }
 
 .borders{
@@ -47,6 +52,41 @@ input {
 
 #split-total {
     margin-left: 40px;
+}
+
+.range-slider-range {
+    margin-left: 17.5%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 40%;
+    height: 25px;
+    background: grey;;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgb(1, 1, 107);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(1, 1, 107);
+    cursor: pointer;
 }
 
 #bill-total {
