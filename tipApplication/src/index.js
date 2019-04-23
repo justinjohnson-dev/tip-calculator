@@ -1,11 +1,10 @@
 // Tip - Calculator
 
-let range = $('.range-slider-range');
-let value = $('.range-slider-value');
-
-
 let tipSlider = function(){
   let slider = $('.tip-slider')
+    range = $('.range-slider-range'),
+    value = $('.range-slider-value');
+
     slider.each(function(){
       value.each(function(){
         let value = $(this).prev().attr('value');
@@ -39,13 +38,12 @@ splitSlider();
 
 function calculatingTotal() {
   let checkAmount = document.getElementById('check-amount').value;
+  let rangeAmount = document.getElementById('rangeSplit');
+  let splitt = document.getElementById('split');
 
+  console.log(splitt);
+  console.log(rangeAmount);
 
-  let foo = parseInt(value);
-  
-  let theTotal = checkAmount * 0.15;
-  let finalTotal = parseInt(checkAmount);
-
-  document.getElementById('split-total').value = theTotal;
-  document.getElementById('bill-total').value = theTotal + finalTotal;
+  document.getElementById('bill-total').value = checkAmount;
+  document.getElementById('split-total').value = splitt;
 }
