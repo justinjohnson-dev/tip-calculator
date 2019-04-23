@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="outline">
+        <div class="title">
+            <h1>Tip Calculator</h1>
+        </div>
         <div class="check-amount borders">
             <label>Check Amount: </label>
             <input id="check-amount" type="text" placeholder="$" onkeyup="calculatingTotal()">
@@ -17,13 +20,13 @@
         <div class="tip-calculation borders">
             <div class="tip-slider">
                 <label>Tip%</label>
-                <input class="range-slider-range" type="range" value="0" min="0" max="25" step="1">
-                <span class="range-slider-value">0</span>
+                <input class="range-slider-range slider" type="range" value="0" min="0" max="25" step="1" onclick="calculatingTotal()" readonly/>
+                <span id="rangeSplit" class="range-slider-value">0</span>
               </div>
             <div class="split-between">
                 <label>Split Between</label>
-                <input class="people-split" type="range" min="0" max="50" step="1" value="0" readonly/>
-                <span class="slideValue">0</span>
+                <input class="people-split slider" type="range" value="0" min="0" max="10" step="1" onclick="calculatingTotal()" readonly/>
+                <span  id="split" class="slideValue">0</span>
             </div>
         </div>
         <div class="totals borders">
